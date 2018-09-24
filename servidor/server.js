@@ -16,19 +16,17 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 app.get("/competencias", competenciasController.buscarCompetencias)
-app.post('/competencias', competenciasController.agregarCompetencia)
-app.delete('/competencias/:id', competenciasController.eliminarCompetencia)
-app.put('/competencias/:id', competenciasController.editarCompetencia)
+app.get('/directores', directorController.buscarDirectores)
+app.get('/actores', actorController.buscarActores)
+app.get('/generos', generoController.buscarGeneros)
 app.get('/competencias/:id', competenciasController.buscarCompetencia)
 app.get("/competencias/:id/peliculas", competenciasController.buscarPeliculas)
 app.get("/competencias/:id/resultados", competenciasController.buscarResultados)
-app.delete('/competencias/:id/votos', competenciasController.eliminarVotos)
+app.post('/competencias', competenciasController.agregarCompetencia)
 app.post('/competencias/:id/voto', competenciasController.agregarVoto)
-
-app.get('/generos', generoController.buscarGeneros)
-app.get('/directores', directorController.buscarDirectores)
-app.get('/actores', actorController.buscarActores)
-
+app.put('/competencias/:id', competenciasController.editarCompetencia)
+app.delete('/competencias/:id/votos', competenciasController.eliminarVotos)
+app.delete('/competencias/:id', competenciasController.eliminarCompetencia)
 
 const puerto = 8080
 
