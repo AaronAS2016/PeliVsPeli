@@ -27,5 +27,5 @@ ALTER TABLE competencia ADD COLUMN director_id INT (11) UNSIGNED, ADD FOREIGN KE
 
 ALTER TABLE competencia ADD COLUMN actor_id INT (11) UNSIGNED, ADD FOREIGN KEY (actor_id) REFERENCES actor(id);
 
-INSERT INTO competencia (`nombre`, `genero_id`, `director_id`, `actor_id`) VALUES('Mejor pelicula de comedia', 2, 3565, 13);
-INSERT INTO competencia (`nombre`, `genero_id`, `director_id`, `actor_id`) VALUES('Mejor pelicula de accion', 1, null, null);
+INSERT INTO competencia (`nombre`, `genero_id`, `director_id`, `actor_id`) VALUES('Mejor pelicula', 3, null, null);
+INSERT INTO competencia (`nombre`, `genero_id`, `director_id`, `actor_id`) VALUES('Mejor pelicula de accion', 1, 1, null);
